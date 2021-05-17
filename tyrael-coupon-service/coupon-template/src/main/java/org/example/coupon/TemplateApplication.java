@@ -2,6 +2,7 @@ package org.example.coupon;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -10,9 +11,9 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * 模板微服务的启动入口
  */
 @EnableScheduling
-@EnableJpaAuditing
+//@EnableJpaAuditing
 @EnableEurekaClient
-@SpringBootApplication
+@SpringBootApplication(exclude= {DataSourceAutoConfiguration.class})
 public class TemplateApplication {
     public static void main(String[] args) {
         SpringApplication.run(TemplateApplication.class,args);
