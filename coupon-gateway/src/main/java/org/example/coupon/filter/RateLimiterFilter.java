@@ -1,4 +1,4 @@
-package org.example.filter;
+package org.example.coupon.filter;
 
 import com.google.common.util.concurrent.RateLimiter;
 import lombok.extern.slf4j.Slf4j;

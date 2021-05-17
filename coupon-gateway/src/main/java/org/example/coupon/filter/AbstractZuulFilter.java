@@ -1,4 +1,4 @@
-package org.example.filter;
+package org.example.coupon.filter;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;

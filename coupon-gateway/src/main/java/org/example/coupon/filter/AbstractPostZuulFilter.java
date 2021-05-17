@@ -1,4 +1,4 @@
-package org.example.filter;
+package org.example.coupon.filter;
 
 import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 

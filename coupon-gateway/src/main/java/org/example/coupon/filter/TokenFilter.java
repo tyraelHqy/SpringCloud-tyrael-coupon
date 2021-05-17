@@ -1,4 +1,4 @@
-package org.example.filter;
+package org.example.coupon.filter;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
