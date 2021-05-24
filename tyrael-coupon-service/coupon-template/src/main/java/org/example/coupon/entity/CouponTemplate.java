@@ -1,5 +1,6 @@
 package org.example.coupon.entity;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,6 +12,7 @@ import org.example.coupon.converter.CouponCategoryConverter;
 import org.example.coupon.converter.DistributeTargetConverter;
 import org.example.coupon.converter.ProductLineConverter;
 import org.example.coupon.converter.TemplateRuleConverter;
+import org.example.coupon.serialization.CouponTemplateSerialize;
 import org.example.coupon.vo.TemplateRule;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -32,6 +34,7 @@ import java.util.logging.SimpleFormatter;
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 @Table(name = "coupon_template")
+@JsonSerialize(using = CouponTemplateSerialize.class)
 public class CouponTemplate implements Serializable {
 
     /**
@@ -80,7 +83,7 @@ public class CouponTemplate implements Serializable {
     private CouponCategory category;
 
     /**
-     * 优惠券分类
+     * 产品线
      */
     @Column(name = "product_line", nullable = false)
     @Convert(converter = ProductLineConverter.class)
