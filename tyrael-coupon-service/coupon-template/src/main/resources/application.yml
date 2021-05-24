@@ -53,8 +53,8 @@ management:
 
 info:
   app:
-    name: imooc-coupon-template
-    groupId: imooc-coupon-service
+    name: coupon-template
+    groupId: tyrael-coupon-service
     artifactId: coupon-template
     version: 1.0-SNAPSHOT
 

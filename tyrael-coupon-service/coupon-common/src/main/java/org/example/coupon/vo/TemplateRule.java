@@ -89,7 +89,4 @@ public class TemplateRule {
             return StringUtils.isNotEmpty(province) && StringUtils.isNotEmpty(city) && StringUtils.isNotEmpty(goodsType);
         }
     }
-
-
-
 }
