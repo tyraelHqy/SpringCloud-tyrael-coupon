@@ -11,7 +11,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * 模板微服务的启动入口
  */
 @EnableScheduling
-//@EnableJpaAuditing
+@EnableJpaAuditing
 @EnableEurekaClient
 @SpringBootApplication(exclude= {DataSourceAutoConfiguration.class})
 public class TemplateApplication {
